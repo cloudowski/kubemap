@@ -1,0 +1,15 @@
+<link href="{{"mermaid/mermaid.custom.css" | relURL}}" type="text/css" rel="stylesheet" />
+<script defer src="{{"mermaid/mermaid.js" | relURL}}">
+    var config = {
+        startOnLoad: true,
+        theme: 'dark',
+        flowchart: {
+            useMaxWidth: true,
+            curve: 'basis',
+            htmlLabels: true
+        }
+    };
+    mermaid.initialize(config);
+</script>
+<div class="mermaid" align="{{ if .Get "align" }}{{ .Get "align" }}{{ else }}center{{ end }}">{{ safeHTML .Inner  }}
+</div>
