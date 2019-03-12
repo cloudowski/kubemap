@@ -16,12 +16,11 @@ url = "/"
 graph BT;
     
     linkStyle default interpolate basis
-    classDef default fill:#f9f,stroke:#333,stroke-width:2px,font-size:22px,padding:8px;
+    classDef default stroke:#333,stroke-width:2px,font-size:22px,padding:8px;
 
 
     container["Container(s)"]--run inside-->pod[Pod]
     click container callback "One or more containers"
-    click container "http://www.github.com" "This is a link"
 
     pod--is scaled by-->rs[ReplicaSet]
     click pod callback "This is a pod. It is a building block for all other workloads inside Kubernetes."
@@ -33,7 +32,7 @@ graph BT;
     pod--runs in an order-->statefulset[StatefulSet]
     click statefulset callback "Runs a set of pods with IP and DNS names set in ordinal fashion. Used by cluster-type workloads."
 
-    pod--runs on every node-->ds[DaemonSet]
+    pod--runs on every node by-->ds[DaemonSet]
     click ds callback "Runs a single pod on every node in a cluster."
 
     rs--enables updates-->deployment[Deployment]
@@ -42,11 +41,11 @@ graph BT;
     pod-->job[Job]
 
     pod-->cronjob[CronJob]
-    pod--is scaled automatically-->hpa[HorizontalPodAutoscaler]
+    pod--is scaled automatically by-->hpa[HorizontalPodAutoscaler]
 
 
     pod--is exposed by-->svc[Service]
-    ep[Endpoints]--registers IP:ports pairs-->svc
+    ep[Endpoints]--registers active IP:PORT pairs-->svc
     svc--provides info for proxy config-->ing[Ingress]
     
     pv[PersistentVolume]-.satisfies.->pvc
