@@ -10,6 +10,7 @@ aliases = [
     "/map"
 ]
 url = "/"
+image = 
 +++
 
 {{<mermaid>}}

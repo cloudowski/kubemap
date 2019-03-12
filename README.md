@@ -6,3 +6,7 @@ Currently it is visible at [https://kubemap.netlify.com](https://kubemap.netlify
 
 ![map](static/map.png)
 
+# Contribute
+
+The map definition is in [content/kubernetes.md](content/kubernetes.md) file and most of changes should be applied there. 
+
