@@ -3,3 +3,5 @@ languageCode = "en-us"
 title = "Kubernetes Objects Map"
 theme = "kube"
 #theme = "kube-custom"
+[params]
+    twitter = "tomasz_cholewa"

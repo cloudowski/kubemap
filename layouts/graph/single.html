@@ -8,15 +8,7 @@
       {{ .Params.bref | safeHTML }}.
     </p> -->
   </div>
-  <div id="action-buttons">
-    <a class="button outline big" href="https://github.com/cloudowski/kubemap">View on Github</a>
-  </div>
-  <div class="message focus" data-component="message"> <span class="close small"></span>
-    This is a map of Kubernetes objects (or resources if you like) showing relationships
-    and connections between them.
-    </br>
-    This may help people who learn better with diagrams and maps.
-  </div>
+  
 
   {{ .Content}}
   <!-- Inject script tag in this template  -->
@@ -26,3 +18,4 @@
   {{end }}
 </div>
 {{ end }}
+{{ define "footer"}} {{ partial "footer" .}} {{end}}
