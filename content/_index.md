@@ -1,9 +1,8 @@
 +++
-title = "Kubernetes Object Map"
+title = "Kubernetes Objects Map"
 description = ""
 weight = 20
 draft = false
-type = "graph"
 bref = ""
 toc = false
 aliases = [
