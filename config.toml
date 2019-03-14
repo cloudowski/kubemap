@@ -1,4 +1,4 @@
-baseURL = "http://kubemap.netlify.com/"
+baseURL = "https://kubemap.dev/"
 languageCode = "en-us"
 title = "Kubernetes Objects Map"
 theme = "kube"
