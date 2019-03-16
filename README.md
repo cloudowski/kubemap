@@ -8,5 +8,6 @@ Site is visible at [https://kubemap.dev](https://kubemap.dev).
 
 # Contribute
 
-The map definition is in [content/kubernetes.md](content/kubernetes.md) file and most of changes should be applied there. 
+If you have ideas on how to improve (especially if you know css and/or mermaidjs) please consider provide your changes via PR :-) 
 
+The map definition is in [layouts/shortcodes/genmap.html](layouts/shortcodes/genmap.html) file and the rest is in [content/](content/) directory.
