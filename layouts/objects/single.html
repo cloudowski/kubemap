@@ -1,0 +1,31 @@
+{{ define "title"}} {{ .Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+
+{{ define "main" }}
+
+<div id="hero" class="wrap">
+  <h1>{{.Title }}</h1>
+  <p>{{.Params.description}}</p>
+</div>
+
+
+<div class="content">
+
+  <h2>Details</h2>
+
+
+
+  <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.10/#{{ .Params.doclink }}">
+    <span class="label focus">
+      API reference
+    </span>
+  </a>
+
+
+  {{ .Content }}
+</div>
+</div>
+{{ end }}
+{{ define "footer" }}
+{{ partial "footer" . }}
+{{ end }}

@@ -1,0 +1,13 @@
+baseURL: "https://kubemap.dev/"
+languageCode: "en-us"
+title: "Kubernetes Objects Map"
+theme: "kube"
+
+params:
+    twitter: "tomasz_cholewa"
+
+menu:
+    main:
+        - name: "Objects"
+          weight: -100
+          url: "/objects/"
