@@ -16,9 +16,9 @@ graph BT;
     
     pod[Pod]--is exposed by-->svc[Service]
 
-    svc-.configures.->lb((LoadBalancer))
-    svc-.configures.->np((NodePort))
-    svc-.configures.->cip((ClusterIP))
+    svc-.configures.->lb(LoadBalancer)
+    svc-.configures.->np(NodePort)
+    svc-.configures.->cip(ClusterIP)
     lb-.direct traffic to.->pod
     np-.direct traffic to.->pod
     cip-.direct traffic to.->pod
