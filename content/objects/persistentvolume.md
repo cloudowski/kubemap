@@ -8,7 +8,6 @@ doclink = "persistentvolume-v1-core"
 
 +++
 
-{{<genmap>}}
 {{<mermaid>}}
 
 graph BT;
