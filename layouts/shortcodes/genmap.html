@@ -45,20 +45,19 @@
     sc[StorageClass]-.dynamically provisions.->pv
 
     vol[Volume]--mounts data inside as files or dirs-->pod[Pod]
-    configmap--exposes as env variables-->pod
+    configmap[ConfigMap]--exposes as env variables-->pod
     configmap--exposes as files-->vol
-    secret--exposes as env variables-->pod
+    secret[Secret]--exposes as env variables-->pod
     secret--exposes as files-->vol
-
-    click statefulset callback "Runs a set of pods with IP and DNS names set in ordinal fashion. Used by cluster-type
-    workloads."
-    click deployment callback "Manage applications lifecycle through mulitple ReplicaSets."
 
     click container "{{ ref . "container" }}" "Click for details"
     click pod "{{ ref . "pod" }}" "Click for details"
     click rs "{{ ref . "replicaset" }}" "Click for details"
+    click deployment "{{ ref . "deployment" }}" "Click for details"
+    click statefulset "{{ ref . "statefulset" }}" "Click for details"
     click rc "{{ ref . "replicationcontroller" }}" "Click for details"
     click ds "{{ ref . "daemonset" }}" "Click for details"
+    click svc "{{ ref . "service" }}" "Click for details"
     click vol "{{ ref . "volume" }}" "Click for details"
     click secret "{{ ref . "secret" }}" "Click for details"
     click configmap "{{ ref . "configmap" }}" "Click for details"
