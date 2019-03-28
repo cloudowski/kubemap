@@ -1,6 +1,6 @@
 +++
 draft = false
-weight = 20
+weight = 3  0
 description = "Configures network access to an app"
 title = "Service"
 
@@ -36,4 +36,5 @@ There are four types of Service:
 * **NodePort** - configures the same things as ClusterIP and additionally opens a dedicated port on **every** node in a cluster; this port directs traffic to any available and ready pod regardless which node it is running on
 * **LoadBalancer** - configures the same things as NodePort and additionally it creates a load balancer service on a platform that a cluster is running on; useful mostly on cloud platforms
 * **ExternalName** - only adds a record in internal , cluster DNS server 
+
 

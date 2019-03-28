@@ -36,8 +36,8 @@
 
 
     pod--is exposed by-->svc[Service]
-    ep[Endpoints]--registers active IP:PORT pairs-->svc
-    svc--provides info for proxy config-->ing[Ingress]
+    ep[Endpoints]--keeps active ip:port pairs-->svc
+    svc--provides info-->ing[Ingress]
 
     pv[PersistentVolume]-.satisfies.->pvc
     pvc[PersistentVolumeClaim]--provides persistent storage-->vol
@@ -58,6 +58,8 @@
     click rc "{{ ref . "replicationcontroller" }}" "Click for details"
     click ds "{{ ref . "daemonset" }}" "Click for details"
     click svc "{{ ref . "service" }}" "Click for details"
+    click ing "{{ ref . "ingress" }}" "Click for details"
+    click ep "{{ ref . "endpoints" }}" "Click for details"
     click vol "{{ ref . "volume" }}" "Click for details"
     click secret "{{ ref . "secret" }}" "Click for details"
     click configmap "{{ ref . "configmap" }}" "Click for details"
