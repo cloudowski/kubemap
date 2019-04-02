@@ -25,7 +25,7 @@ url = "/"
 
 <h2 itemprop="headline">How to use it?</h2>
 <div id="post">
-    You may want to use zoom in your browser, as currently the map does not support zooming itself. Some objects have additional data as tooltips (just hover over them to see more info) or links to a page with more details.
+    You may want to use zoom in your browser, as currently the map does not support zooming itself. Click on a object to see a page with more details (for some reasons your mouse cursor doesn't change when you hover over, but it has a proper link).
 </div>
 
 <div id="action-buttons">

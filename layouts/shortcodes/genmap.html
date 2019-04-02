@@ -16,38 +16,72 @@
     graph BT;
 
     linkStyle default interpolate basis
-    classDef default stroke-width:2px;
+    classDef default stroke-width:3px;
+    
 
 
 
     container["Container(s)"]--run inside-->pod[Pod]
+    style container stroke:#BE41FC;
+
     pod--is scaled by-->rs[ReplicaSet]
+    style pod stroke:#BE41FC;
+
+
     rs--enables updates-->deployment[Deployment]
-
-
+    style deployment stroke:#141B41;
+    style rs stroke:#141B41;
+    
     pod--is scaled by-->rc[ReplicationController]
+    style rc stroke:#141B41;
+
     pod--runs in an orderly fashion-->statefulset[StatefulSet]
+    style statefulset stroke:#141B41;
+
     pod--runs on every node by-->ds[DaemonSet]
+    style ds stroke:#141B41;
 
-    pod-->job[Job]
+    pod--execute a task-->job[Job]
+    style job stroke:#141B41;
 
-    pod-->cronjob[CronJob]
+    pod--execute a task based on a schedule-->cronjob[CronJob]
+    style cronjob stroke:#141B41;
+
     pod--is scaled automatically by-->hpa[HorizontalPodAutoscaler]
+    style hpa stroke:#141B41;
 
 
     pod--is exposed by-->svc[Service]
+    style svc stroke:#2DF02A;
+
     ep[Endpoints]--keeps active ip:port pairs-->svc
+    style ep stroke:#2DF02A;
+
     svc--provides info-->ing[Ingress]
+    style ing stroke:#2DF02A;
 
     pv[PersistentVolume]-.satisfies.->pvc
+    style pvc stroke:#D12E2E;
+
     pvc[PersistentVolumeClaim]--provides persistent storage-->vol
+    style pv stroke:#D12E2E;
+    style vol stroke:#D12E2E;
+    
     pv--may belongs to single-->sc
+    style sc stroke:#D12E2E;
+
     sc[StorageClass]-.dynamically provisions.->pv
+    style sc stroke:#D12E2E;
 
     vol[Volume]--mounts data inside as files or dirs-->pod[Pod]
+    
     configmap[ConfigMap]--exposes as env variables-->pod
+    style configmap stroke:#D12E2E;
+
     configmap--exposes as files-->vol
     secret[Secret]--exposes as env variables-->pod
+    style secret stroke:#D12E2E;
+
     secret--exposes as files-->vol
 
     click container "{{ ref . "container" }}" "Click for details"
@@ -56,6 +90,8 @@
     click deployment "{{ ref . "deployment" }}" "Click for details"
     click statefulset "{{ ref . "statefulset" }}" "Click for details"
     click rc "{{ ref . "replicationcontroller" }}" "Click for details"
+    click job "{{ ref . "job" }}" "Click for details"
+    click cronjob "{{ ref . "cronjob" }}" "Click for details"
     click ds "{{ ref . "daemonset" }}" "Click for details"
     click svc "{{ ref . "service" }}" "Click for details"
     click ing "{{ ref . "ingress" }}" "Click for details"
