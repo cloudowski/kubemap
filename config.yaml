@@ -5,6 +5,8 @@ theme: "kube"
 
 params:
     twitter: "tomasz_cholewa"
+    images:
+        - static/map.png
 
 menu:
     main:
