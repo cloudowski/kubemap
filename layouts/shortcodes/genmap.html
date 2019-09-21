@@ -31,7 +31,11 @@
     rs--enables updates-->deployment[Deployment]
     style deployment stroke:#141B41;
     style rs stroke:#141B41;
-    
+
+    hpa[HorizontalPodAutoscaler]--autoscales-->rs
+    hpa--autoscales-->deployment
+    style hpa stroke:#141B41;
+
     pod--is scaled by-->rc[ReplicationController]
     style rc stroke:#141B41;
 
@@ -44,11 +48,8 @@
     pod--execute a task-->job[Job]
     style job stroke:#141B41;
 
-    pod--execute a task based on a schedule-->cronjob[CronJob]
+    job--execute a task based on a schedule-->cronjob[CronJob]
     style cronjob stroke:#141B41;
-
-    pod--is scaled automatically by-->hpa[HorizontalPodAutoscaler]
-    style hpa stroke:#141B41;
 
 
     pod--is exposed by-->svc[Service]
