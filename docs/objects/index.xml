@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Objects on Kubernetes Objects Map</title>
+    <link>https://kubemap.dev/objects/</link>
+    <description>Recent content in Objects on Kubernetes Objects Map</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://kubemap.dev/objects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Container</title>
+      <link>https://kubemap.dev/objects/container/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubemap.dev/objects/container/</guid>
+      <description>var config = { startOnLoad: true, theme: &#39;dark&#39;, flowchart: { useMaxWidth: true, curve: &#39;basis&#39;, htmlLabels: true } }; mermaid.initialize(config);  graph BT; classDef highlight fill:#AFFC41,stroke:#141B41,stroke-width:2px; container[&#34;Container(s)&#34;]--pod[Pod] class container highlight  Container does all the work defined in a pod definition.
+Types There are a couple of container types:
+ main container - runs a main application/service init container - runs before main container and performs some initalization tasks sidecar container - runs alongside application/service container; it cooperates in serving requests or sometimes acts as a proxy (e.</description>
+    </item>
+    
+    <item>
+      <title>Pod</title>
+      <link>https://kubemap.dev/objects/pod/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubemap.dev/objects/pod/</guid>
+      <description>var config = { startOnLoad: true, theme: &#39;dark&#39;, flowchart: { useMaxWidth: true, curve: &#39;basis&#39;, htmlLabels: true } }; mermaid.initialize(config);  graph BT; classDef highlight fill:#AFFC41,stroke:#141B41,stroke-width:2px; container[&#34;Container(s)&#34;]--pod[Pod] click pod &#34;https://kubemap.dev/objects/pod/&#34; &#34;Click for details&#34; class pod highlight  Pod runs one or more containers. Those containers share the same network namespace and this have the same IP address. These containers also run always on the same host.</description>
+    </item>
+    
+    <item>
+      <title>Service</title>
+      <link>https://kubemap.dev/objects/service/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubemap.dev/objects/service/</guid>
+      <description>var config = { startOnLoad: true, theme: &#39;dark&#39;, flowchart: { useMaxWidth: true, curve: &#39;basis&#39;, htmlLabels: true } }; mermaid.initialize(config);  graph BT; classDef highlight fill:#AFFC41,stroke:#141B41,stroke-width:2px; classDef net fill:#EBEBEB,stroke:#414141,stroke-width:1px; pod[Pod]--is exposed by--svc[Service] svc-.configures.-lb(LoadBalancer) svc-.configures.-np(NodePort) svc-.configures.-cip(ClusterIP) lb-.direct traffic to.-pod np-.direct traffic to.-pod cip-.direct traffic to.-pod class svc highlight class lb,np,cip net  Service is an abstraction layer that configures underlying network infrastructure to provide an access to ports exposed by a Pod.</description>
+    </item>
+    
+    <item>
+      <title>Deployment</title>
+      <link>https://kubemap.dev/objects/deployment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubemap.dev/objects/deployment/</guid>
+      <description>var config = { startOnLoad: true, theme: &#39;dark&#39;, flowchart: { useMaxWidth: true, curve: &#39;basis&#39;, htmlLabels: true } }; mermaid.initialize(config);  graph BT; classDef highlight fill:#AFFC41,stroke:#141B41,stroke-width:2px; rs[ReplicaSet]--enables app declarative updates--deployment[Deployment] deployment-.manages.-rs class deployment highlight   For standard applications Deployment object is best and recommended way to launch them. It is advised NOT to use ReplicaSet objects and definitely not Pod directly.  Deployment object manages application updates by creating revisions with ReplicaSet objects.</description>
+    </item>
+    
+    <item>
+      <title>StatefulSet</title>
+      <link>https://kubemap.dev/objects/statefulset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubemap.dev/objects/statefulset/</guid>
+      <description>var config = { startOnLoad: true, theme: &#39;dark&#39;, flowchart: { useMaxWidth: true, curve: &#39;basis&#39;, htmlLabels: true } }; mermaid.initialize(config);  graph BT; classDef highlight fill:#AFFC41,stroke:#141B41,stroke-width:2px; pod[Pod]--runs in an orderly fashion--statefulset[StatefulSet] class statefulset highlight  StatefulSets are designed to run services which require predictable hostnames and IP addresses that don&amp;rsquo;t change when Pod is moved/deleted/recreated. All pods running in a StatefulSet require a storage which is defined by PersistentVolumeClaim objects.</description>
+    </item>
+    
+    <item>
+      <title>ConfigMap</title>
+      <link>https://kubemap.dev/objects/configmap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubemap.dev/objects/configmap/</guid>
+      <description>var config = { startOnLoad: true, theme: &#39;dark&#39;, flowchart: { useMaxWidth: true, curve: &#39;basis&#39;, htmlLabels: true } }; mermaid.initialize(config);  graph BT; classDef highlight fill:#AFFC41,stroke:#141B41,stroke-width:2px; cm[ConfigMap]--env variables--pod cm--vol vol[Volume]--files--pod[Pod] class cm highlight  ConfigMap is a sibling of Secret. It is a general purpose object for storing configuration, non-confidential data for containers and providing them as files mounted inside them using volumes or environment variables passed directly to them.</description>
+    </item>
+    
+    <item>
+      <title>DaemonSet</title>
+      <link>https://kubemap.dev/objects/daemonset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubemap.dev/objects/daemonset/</guid>
+      <description>var config = { startOnLoad: true, theme: &#39;dark&#39;, flowchart: { useMaxWidth: true, curve: &#39;basis&#39;, htmlLabels: true } }; mermaid.initialize(config);  graph BT; classDef highlight fill:#AFFC41,stroke:#141B41,stroke-width:2px; pod[Pod]--is scaled by--ds[DaemonSet] class ds highlight  DaemonSet is responsible of running a single instance of a defined pod on every node in Kubernetes cluster.</description>
+    </item>
+    
+    <item>
+      <title>ReplicaSet</title>
+      <link>https://kubemap.dev/objects/replicaset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubemap.dev/objects/replicaset/</guid>
+      <description>var config = { startOnLoad: true, theme: &#39;dark&#39;, flowchart: { useMaxWidth: true, curve: &#39;basis&#39;, htmlLabels: true } }; mermaid.initialize(config);  graph BT; classDef highlight fill:#AFFC41,stroke:#141B41,stroke-width:2px; pod[Pod]--is scaled by--rs[ReplicaSet] class rs highlight  ReplicaSet is a very simple object that has only ONE task - to run a defined number of replicas defines as pod templates. It keeps them alive by launching new ones in case of failure (node crash, pod unresponsive etc.</description>
+    </item>
+    
+    <item>
+      <title>ReplicationController</title>
+      <link>https://kubemap.dev/objects/replicationcontroller/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubemap.dev/objects/replicationcontroller/</guid>
+      <description>var config = { startOnLoad: true, theme: &#39;dark&#39;, flowchart: { useMaxWidth: true, curve: &#39;basis&#39;, htmlLabels: true } }; mermaid.initialize(config);  graph BT; classDef highlight fill:#AFFC41,stroke:#141B41,stroke-width:2px; pod[Pod]--is scaled by--rc[ReplicationController] class rc highlight   Warning ReplicationController is considered as deprecated and it is recommended to use its successor - ReplicaSet  ReplicationController job is to run a defined number of replicas defines as pod templates. It keeps them alive by launching new ones in case of failure (node crash, pod unresponsive etc.</description>
+    </item>
+    
+    <item>
+      <title>Secret</title>
+      <link>https://kubemap.dev/objects/secret/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubemap.dev/objects/secret/</guid>
+      <description>var config = { startOnLoad: true, theme: &#39;dark&#39;, flowchart: { useMaxWidth: true, curve: &#39;basis&#39;, htmlLabels: true } }; mermaid.initialize(config);  graph BT; classDef highlight fill:#AFFC41,stroke:#141B41,stroke-width:2px; secret[Secret]--env variables--pod secret--vol vol[Volume]--files--pod[Pod] class secret highlight  Secrets are base64 encoded (NOT encrypted) values that are designed to provide confidential data for containers as files mounted inside them using volumes or environment variables passed directly to them.
+It is very similar to ConfigMap object.</description>
+    </item>
+    
+    <item>
+      <title>Volume</title>
+      <link>https://kubemap.dev/objects/volume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubemap.dev/objects/volume/</guid>
+      <description>var config = { startOnLoad: true, theme: &#39;dark&#39;, flowchart: { useMaxWidth: true, curve: &#39;basis&#39;, htmlLabels: true } }; mermaid.initialize(config);  graph BT; classDef highlight fill:#AFFC41,stroke:#141B41,stroke-width:2px; vol[Volume]--pod[Pod] class vol highlight  Volumes are used to provide different kind of data to containers defined in a pod.
+Volume types There are a couple of types of volumes:
+ configuration - Secret and ConfigMap are such objects; they contain configuration data stored in Kubernetes store and are provided to containers as directories with files, single files or environment variables passed to containers; usually they are read-only data - standard volumes mounted inside containers to provide a place for reading a writing data interface - abstraction layers to hide complexity and implementation details from a user (e.</description>
+    </item>
+    
+    <item>
+      <title>CronJob</title>
+      <link>https://kubemap.dev/objects/cronjob/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubemap.dev/objects/cronjob/</guid>
+      <description>var config = { startOnLoad: true, theme: &#39;dark&#39;, flowchart: { useMaxWidth: true, curve: &#39;basis&#39;, htmlLabels: true } }; mermaid.initialize(config);  graph BT; classDef highlight fill:#AFFC41,stroke:#141B41,stroke-width:2px; pod[Pod]--execute a task based on a schedule--cronjob[CronJob] class cronjob highlight  Job is a simple objects that ensures that specified task completes successfully. It is very similar to a CronJob, but it starts immediately while CronJob works based on a schedule.</description>
+    </item>
+    
+    <item>
+      <title>Endpoints</title>
+      <link>https://kubemap.dev/objects/endpoints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubemap.dev/objects/endpoints/</guid>
+      <description>var config = { startOnLoad: true, theme: &#39;dark&#39;, flowchart: { useMaxWidth: true, curve: &#39;basis&#39;, htmlLabels: true } }; mermaid.initialize(config);  graph BT; classDef highlight fill:#AFFC41,stroke:#141B41,stroke-width:2px; ep[Endpoints]--keeps ip:port pairs--svc[Service] class ep highlight  Endpoints object keeps all ip:port pairs of Pods serving requests defined by a selector in a Service.</description>
+    </item>
+    
+    <item>
+      <title>Ingress</title>
+      <link>https://kubemap.dev/objects/ingress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubemap.dev/objects/ingress/</guid>
+      <description>var config = { startOnLoad: true, theme: &#39;dark&#39;, flowchart: { useMaxWidth: true, curve: &#39;basis&#39;, htmlLabels: true } }; mermaid.initialize(config);  graph BT; classDef highlight fill:#AFFC41,stroke:#141B41,stroke-width:2px; svc[Service]--provides info--ing[Ingress] ep[Endpoints]-.provide ip:port pair.-ing class ing highlight  Ingress is an interface that is implemented by many providers. They implement this simple interface to provide automatically configurable reverse proxy for http applications running in containers in Pods. Information about endpoints is retrieved through a Service (records are taken directly from matching Endpoints object).</description>
+    </item>
+    
+    <item>
+      <title>Job</title>
+      <link>https://kubemap.dev/objects/job/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubemap.dev/objects/job/</guid>
+      <description>var config = { startOnLoad: true, theme: &#39;dark&#39;, flowchart: { useMaxWidth: true, curve: &#39;basis&#39;, htmlLabels: true } }; mermaid.initialize(config);  graph BT; classDef highlight fill:#AFFC41,stroke:#141B41,stroke-width:2px; pod[Pod]--execute a task--job[Job] class job highlight  Job is a simple objects that ensures that specified task completes successfully. It is very similar to a CronJob, but it starts immediately while CronJob works based on a schedule.</description>
+    </item>
+    
+    <item>
+      <title>PersistentVolume</title>
+      <link>https://kubemap.dev/objects/persistentvolume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubemap.dev/objects/persistentvolume/</guid>
+      <description>var config = { startOnLoad: true, theme: &#39;dark&#39;, flowchart: { useMaxWidth: true, curve: &#39;basis&#39;, htmlLabels: true } }; mermaid.initialize(config);  graph BT; classDef highlight fill:#AFFC41,stroke:#141B41,stroke-width:2px; classDef grey fill:#EBEBEB,stroke:#141B41,stroke-width:2px; pv--may belongs to single--sc sc[StorageClass]-.dynamically provisions.-pv physical((Physical Data))-.-pv class pv highlight class physical grey  PersistentVolume represents a physical volume - it has all the necessary parameters to connect underlying physical storage as volume (using PVC) to a pod. It defines &amp;ldquo;HOW&amp;rdquo; to access a physical storage.</description>
+    </item>
+    
+    <item>
+      <title>PersistentVolumeClaim</title>
+      <link>https://kubemap.dev/objects/persistentvolumeclaim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubemap.dev/objects/persistentvolumeclaim/</guid>
+      <description>var config = { startOnLoad: true, theme: &#39;dark&#39;, flowchart: { useMaxWidth: true, curve: &#39;basis&#39;, htmlLabels: true } }; mermaid.initialize(config);  graph BT; classDef highlight fill:#AFFC41,stroke:#141B41,stroke-width:2px; pv[PersistentVolume]--binds--pvc pvc[PersistentVolumeClaim]--provides persistent storage--vol[Volume] class pvc highlight  PersistentVolumeClaim defines &amp;ldquo;WHAT&amp;rdquo; kind of persistent storage is needed by a Pod. It describes it with only a few parameters such as size, access mode (single/multi, ro/rw) and optionally group (StorageClass) that it belongs to.</description>
+    </item>
+    
+    <item>
+      <title>StorageClass</title>
+      <link>https://kubemap.dev/objects/storageclass/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubemap.dev/objects/storageclass/</guid>
+      <description>var config = { startOnLoad: true, theme: &#39;dark&#39;, flowchart: { useMaxWidth: true, curve: &#39;basis&#39;, htmlLabels: true } }; mermaid.initialize(config);  graph BT; classDef highlight fill:#AFFC41,stroke:#141B41,stroke-width:2px; pv--may belongs to single--sc sc[StorageClass]-.dynamically provisions.-pv class sc highlight  StorageClass has two functions:
+ For static PersistentVolumes (those created by cluster administrator) it groups and thus enabling fine-grained assignment in PersistentVolumeClaims definitions. For dynamic mode it creates PersistentVolume automatically with defined provisioner (e.</description>
+    </item>
+    
+  </channel>
+</rss>

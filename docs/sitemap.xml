@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://kubemap.dev/objects/container/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/map/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/objects/pod/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/objects/service/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/objects/deployment/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/objects/statefulset/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/objects/configmap/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/objects/daemonset/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/objects/replicaset/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/objects/replicationcontroller/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/objects/secret/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/objects/volume/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/objects/cronjob/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/objects/endpoints/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/objects/ingress/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/objects/job/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/objects/persistentvolume/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/objects/persistentvolumeclaim/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/objects/storageclass/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/objects/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kubemap.dev/tags/</loc>
+  </url>
+  
+</urlset>
